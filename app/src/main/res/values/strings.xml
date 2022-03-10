@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">AllBank</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_statistics">Statistics</string>
+    <string name="title_plus">New transaction</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_available_balance">Available Balance</string>
+    <string name="balance_hint">$3000.00</string>
+    <string name="home_recent_transactions">Recent Transactions</string>
+    <string name="home_all">All</string>
+    <string name="home_income">Income</string>
+    <string name="home_expenses">Expenses</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="error_username">Username should contain letters, digits, \'.\' and \'_\' and be 8–20 characters long!</string>
+    <string name="error_password">Password should have 8–30 characters, upper and lowercase, 1 special character and min 1 number</string>
+    <string name="error_email">Email should be a valid one!</string>
+    <string name="error_phone">Number should start with 07 and have 10 digits!</string>
+    <string name="error_last_name">Last name not valid!</string>
+    <string name="error_first_name">First name not valid!</string>
+
+    <string name="advanced">Advanced</string>
+    <string name="income">INCOME</string>
+    <string name="expenses">Last month expenses</string>
+    <string name="textView_home_income">Last month income</string>
+    <string name="enter_start_date">Start date</string>
+    <string name="enter_end_date">End date</string>
+    <string name="total">Total difference</string>
+    <string name="total_income">Total income</string>
+    <string name="total_expenses">Total expenses</string>
+    <string name="all">All</string>
+    <string name="bcr">BCR</string>
+    <string name="bt">BT</string>
+    <string name="statistics_goals">Goals</string>
+    <string name="statistics_statistics">Statistics</string>
+    <string name="spent">Spent</string>
+    <string name="budget">Budget</string>
+
+    <string name="text_view_about">
+       \ \ \ \ Allbank is a mobile fintech that helps the user manage its banking accounts in an easier manner. The application unifies all the user\'s bank accounts into a single one, making it easier to manage payments, get detailed and easily customizable statistics of the transactions.
+        \n\ \ \ \ The project is a bachelor\'s degree final project that aims to integrate the banking APIs so that the user experience is maximized. Application\'s top features include synchronizing all the banking accounts from different banks into one single application, providing detailed
+        statistics about income and expenses which can be easily customized based on your needs and easy saving on the payments, making it easier for the user to control the transactions.
+    </string>
+
+    <string name="text_view_privacy">
+        \ \ \ \ Your privacy is important to us, so that\'s why we don\'t store any sensitive data on our servers (for example bank\'s account iban, currency or details about its transactions).
+        \n\ \ \ \ By using this application, you consent to the fact that Allbank is an authorized third-party provider that may use your data. Only the authorized requests
+        are passed further to the banking servers and the application CANNOT itself behave on its own.
+    </string>
+</resources>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/card_view_rounded_medium_size_4_sides">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_medium">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_transaction_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/text_view_transaction_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RON"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_transaction_amount"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_transaction_amount" />
+
+                    <TextView
+                        android:id="@+id/text_view_transaction_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="120.35"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/text_view_transaction_from_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="From:"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/font_basic_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_view_transaction_amount" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mihalache Ion"
+                android:textColor="@color/text_color_grey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_from_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_from_iban_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Iban"
+                android:textSize="@dimen/font_basic_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_from_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_iban_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RO12ABSU58ASIARBB"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_from_iban_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_from_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="To:"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/font_basic_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_from_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dumitrescu Adrian"
+                android:textColor="@color/text_color_grey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_to_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_to_iban_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Iban"
+                android:textSize="@dimen/font_basic_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_to_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_iban_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RO97ABSU58ASIARBB"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_to_iban_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_to_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Category"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/font_basic_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_to_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textColor="@color/text_color_grey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_category_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_category_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Gift for George. Don't mention it"
+                android:textColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_transaction_details_text"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_details" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_success_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Date:"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/font_basic_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_details_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24/06/2021"
+                android:textColor="@color/text_color_grey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_new_transaction_success_date_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_bank_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:textSize="@dimen/font_basic_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_success_date_text" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCR"
+                android:textSize="@dimen/font_basic_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_success_date_text" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_transaction_enabled"
+                style="@style/FontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:text="Enabled"
+                android:textColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_transaction_bank"
+                app:thumbTint="@color/switch_transaction_thumb"
+                app:trackTint="@color/switch_transaction_track" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

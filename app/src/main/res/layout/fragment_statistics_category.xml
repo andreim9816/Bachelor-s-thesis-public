@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:verticalScrollbarPosition="right">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="45dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material_card_view_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/MaterialCardview_home">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_statistics_category_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_statistics_date_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_extra_small"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_statistics_category_filter" />
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_statistics_dates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_statistics_date_filter">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_statistics_start_date_picker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:startIconDrawable="@drawable/ic_calendar">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_text_statistics_start_date_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin_small"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint="@string/enter_start_date"
+                            android:textColorHint="@color/white"
+                            android:textIsSelectable="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_statistics_end_date_picker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:startIconDrawable="@drawable/ic_calendar">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_text_statistics_end_date_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin_small"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint="@string/enter_end_date"
+                            android:textColorHint="@color/white"
+                            android:textIsSelectable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_pie_chart_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="@dimen/padding_medium"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardElevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_layout_statistics_dates"
+                    app:shapeAppearanceOverlay="@style/card_view_rounded_big_size_4_sides">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:paddingTop="@dimen/padding_extra_large"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_layout_statistics_average"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_view_pie_chart_statistics">
+
+                    <TextView
+                        android:id="@+id/text_view_statistics_average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Average statistics"
+                        android:textSize="@dimen/heading_h4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexbox_layout_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        app:justifyContent="space_evenly"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_statistics_average">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/primary"
+                            app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/padding_small">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/image_view_statistics_average_daily"
+                                    android:layout_width="@dimen/statistics_calendar_icon_width"
+                                    android:layout_height="@dimen/statistics_calendar_icon_height"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:background="@color/white"
+                                    android:src="@drawable/ic_calendar_daily"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_large"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/image_view_statistics_average_daily">
+
+                                    <TextView
+                                        android:id="@+id/text_view_statistics_average_daily"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="120.35"
+                                        android:textSize="@dimen/heading_h5"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="RON"
+                                        app:layout_constraintStart_toEndOf="@+id/text_view_statistics_average_daily"
+                                        app:layout_constraintTop_toTopOf="@+id/text_view_statistics_average_daily" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/primary"
+                            app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/padding_small">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/image_view_statistics_average_weekly"
+                                    android:layout_width="@dimen/statistics_calendar_icon_width"
+                                    android:layout_height="@dimen/statistics_calendar_icon_height"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="32dp"
+                                    android:background="@color/white"
+                                    android:src="@drawable/ic_calendar_weekly"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_large"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/image_view_statistics_average_weekly">
+
+                                    <TextView
+                                        android:id="@+id/text_view_statistics_average_weekly"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="120.35"
+                                        android:textSize="@dimen/heading_h5"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="RON"
+                                        app:layout_constraintStart_toEndOf="@+id/text_view_statistics_average_weekly"
+                                        app:layout_constraintTop_toTopOf="@+id/text_view_statistics_average_weekly" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/primary"
+                            app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/padding_small">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/image_view_statistics_average_monthly"
+                                    android:layout_width="@dimen/statistics_calendar_icon_width"
+                                    android:layout_height="@dimen/statistics_calendar_icon_height"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="32dp"
+                                    android:background="@color/white"
+                                    android:src="@drawable/ic_calendar_monthly"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_large"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/image_view_statistics_average_monthly">
+
+                                    <TextView
+                                        android:id="@+id/text_view_statistics_average_monthly"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="120.35"
+                                        android:textSize="@dimen/heading_h5"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="RON"
+                                        app:layout_constraintStart_toEndOf="@+id/text_view_statistics_average_monthly"
+                                        app:layout_constraintTop_toTopOf="@+id/text_view_statistics_average_monthly" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_view_statistics_total_expenses"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/primary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/flexbox_layout_statistics"
+                        app:shapeAppearanceOverlay="@style/card_view_rounded_medium_size_4_sides">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/text_view_statistics_total_sum_spent_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="500 RON"
+                                android:textSize="@dimen/heading_h6"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/text_view_statistics_total_sum_spent_2" />
+
+                            <TextView
+                                android:id="@+id/text_view_statistics_total_sum_spent_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="1250.35 RON"
+                                android:textSize="@dimen/heading_h6"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_view_statistics_total_sum_spent_1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/text_view_statistics_total_sum_spent_1" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/shapeableImageView"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="Selected"
+                                android:textColor="@color/text_color_grey"
+                                app:layout_constraintBottom_toTopOf="@+id/text_view_statistics_total_sum_spent_1"
+                                app:layout_constraintEnd_toEndOf="@+id/text_view_statistics_total_sum_spent_1"
+                                app:layout_constraintStart_toStartOf="@+id/text_view_statistics_total_sum_spent_1" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="Total"
+                                android:textColor="@color/text_color_grey"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                                app:layout_constraintEnd_toEndOf="@+id/text_view_statistics_total_sum_spent_2"
+                                app:layout_constraintStart_toStartOf="@+id/text_view_statistics_total_sum_spent_2"
+                                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                            <TextView
+                                android:id="@+id/text_view_statistics_total_percentage_difference"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="17%"
+                                android:textSize="@dimen/heading_h5"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_view_statistics_total_sum_spent_1"
+                                app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+                                app:layout_constraintTop_toTopOf="@+id/text_view_statistics_total_sum_spent_1" />
+
+                            <TextView
+                                android:id="@+id/text_view_statisics_category_interval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="05/06  -  13/06"
+                                android:textSize="@dimen/heading_h6"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+                                app:layout_constraintEnd_toEndOf="@+id/text_view_statistics_total_sum_spent_2"
+                                app:layout_constraintStart_toStartOf="@+id/text_view_statistics_total_sum_spent_1"
+                                app:layout_constraintTop_toTopOf="@+id/shapeableImageView"
+                                app:layout_constraintVertical_bias="0.35" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_bar_chart_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/padding_medium"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardElevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint_layout_statistics_average"
+                    app:shapeAppearanceOverlay="@style/card_view_rounded_big_size_4_sides">
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/bar_chart_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_transactions_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:verticalScrollbarPosition="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_view_bar_chart_statistics"
+                    tools:listitem="@layout/recyclerview_item_transaction" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

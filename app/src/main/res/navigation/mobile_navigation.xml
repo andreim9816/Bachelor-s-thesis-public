@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="licenta.allbank.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_homeAdvancedFragment"
+            app:destination="@id/homeAdvancedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_statistics"
+            app:destination="@id/navigation_statistics"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_transactions"
+            app:destination="@id/navigation_transactions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="licenta.allbank.ui.statistics.StatisticsFragment"
+        android:label="@string/title_statistics"
+        tools:layout="@layout/fragment_statistics">
+        <action
+            android:id="@+id/action_navigation_statistics_to_newBudget"
+            app:destination="@id/newBudget"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_statistics_to_budgetFragment2"
+            app:destination="@id/budgetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_statistics_to_editBudgetFragment"
+            app:destination="@id/editBudgetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_statistics_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transactions"
+        android:name="licenta.allbank.ui.transactions.TransactionsFragment"
+        android:label="@string/title_plus"
+        tools:layout="@layout/fragment_transactions">
+        <action
+            android:id="@+id/action_navigation_transactions_to_readTransactionQrFragment"
+            app:destination="@id/readTransactionQrFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_transactions_to_confirmTransactionFragment"
+            app:destination="@id/confirmTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_transactions_to_newTransactionAccountsFragment"
+            app:destination="@id/newTransactionAccountsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_transactions_to_generateCodeQrAccountsFragment"
+            app:destination="@id/generateCodeQrAccountsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="licenta.allbank.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_accountsFragment"
+            app:destination="@id/accountsFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_profile_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_profile_to_privacyFragment"
+            app:destination="@id/privacyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_profile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeAdvancedFragment"
+        android:name="licenta.allbank.ui.homeAdvanced.HomeAdvancedFragment"
+        android:label="Advanced mode">
+        <action
+            android:id="@+id/action_homeAdvancedFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeAdvancedFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBudget"
+        android:name="licenta.allbank.ui.budget.NewBudgetFragment"
+        android:label="New budget">
+        <action
+            android:id="@+id/action_newBudget_to_budgetConfirmFragment"
+            app:destination="@id/budgetConfirmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetConfirmFragment"
+        android:name="licenta.allbank.ui.budget.BudgetConfirmFragment"
+        android:label="Confirm budget">
+        <action
+            android:id="@+id/action_budgetConfirmFragment_to_navigation_statistics"
+            app:destination="@id/navigation_statistics"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="licenta.allbank.ui.budget.BudgetFragment"
+        android:label="Budget details">
+        <action
+            android:id="@+id/action_budgetFragment_to_navigation_statistics2"
+            app:destination="@id/navigation_statistics"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBudgetFragment"
+        android:name="licenta.allbank.ui.budget.EditBudgetFragment"
+        android:label="Edit budget">
+        <action
+            android:id="@+id/action_editBudgetFragment_to_navigation_statistics"
+            app:destination="@id/navigation_statistics"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageCodeQrFragment"
+        android:name="licenta.allbank.ui.transactions.generateQr.ImageCodeQrFragment"
+        android:label="QR Code"
+        tools:layout="@layout/fragment_image_code_qr" />
+    <fragment
+        android:id="@+id/readTransactionQrFragment"
+        android:name="licenta.allbank.ui.transactions.scanQr.ReadTransactionQrFragment"
+        android:label="Read QR Code"
+        tools:layout="@layout/fragment_read_transaction_qr">
+        <action
+            android:id="@+id/action_readTransactionQrFragment_to_newTransactionAccountsFragment"
+            app:destination="@id/newTransactionAccountsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmTransactionFragment"
+        android:name="licenta.allbank.ui.transactions.ConfirmTransactionFragment"
+        android:label="Confirm payment"
+        tools:layout="@layout/fragment_confirm">
+        <action
+            android:id="@+id/action_confirmTransactionFragment_to_newTransactionSuccessFragment"
+            app:destination="@id/newTransactionSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation_transactions"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransactionSuccessFragment"
+        android:name="licenta.allbank.ui.transactions.newTransaction.NewTransactionSuccessFragment"
+        android:label="Transaction successful"
+        tools:layout="@layout/fragment_new_transaction_success">
+        <action
+            android:id="@+id/action_newTransactionSuccessFragment_to_navigation_transactions"
+            app:destination="@id/navigation_transactions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountsFragment2"
+        android:name="licenta.allbank.ui.profile.accounts.AccountsFragment"
+        android:label="Accounts"
+        tools:layout="@layout/fragment_accounts">
+        <action
+            android:id="@+id/action_accountsFragment2_to_chooseNewBankAccountFragment"
+            app:destination="@id/chooseNewBankAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransactionAccountsFragment"
+        android:name="licenta.allbank.ui.transactions.newTransaction.NewTransactionAccountsFragment"
+        android:label="Accounts">
+        <action
+            android:id="@+id/action_newTransactionAccountsFragment_to_newTransactionConfirmFragment"
+            app:destination="@id/newTransactionConfirmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransactionConfirmFragment"
+        android:name="licenta.allbank.ui.transactions.newTransaction.NewTransactionConfirmFragment"
+        android:label="Transaction"
+        tools:layout="@layout/fragment_new_transaction_confirm">
+        <action
+            android:id="@+id/action_newTransactionConfirmFragment_to_confirmTransactionFragment"
+            app:destination="@id/confirmTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseNewBankAccountFragment"
+        android:name="licenta.allbank.ui.profile.accounts.ChooseNewBankAccountFragment"
+        android:label="Add bank account"
+        tools:layout="@layout/fragment_choose_new_bank_account">
+        <action
+            android:id="@+id/action_chooseNewBankAccountFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="licenta.allbank.ui.others.TransactionFragment"
+        android:label="Transaction" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="licenta.allbank.ui.profile.AboutFragment"
+        android:label="About Allbank"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="licenta.allbank.ui.profile.PrivacyFragment"
+        android:label="Application privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="licenta.allbank.ui.profile.EditProfileFragment"
+        android:label="Edit profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateCodeQrAccountsFragment"
+        android:name="licenta.allbank.ui.transactions.generateQr.GenerateCodeQrAccountsFragment"
+        android:label="Accounts">
+        <action
+            android:id="@+id/action_generateCodeQrAccountsFragment_to_imageCodeQrFragment"
+            app:destination="@id/imageCodeQrFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>

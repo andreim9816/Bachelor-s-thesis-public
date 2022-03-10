@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_home_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_extra_small"
+        android:layout_marginVertical="@dimen/margin_extra_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardBackgroundColor="@color/primary"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView_recycler_transaction_bank"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:shapeAppearanceOverlay="@style/card_view_rounded_small_size_4_sides"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_recycler_transaction_bank"
+                card_view:layout_constraintStart_toEndOf="@+id/imageView_recycler_transaction_bank"
+                card_view:layout_constraintTop_toTopOf="@+id/imageView_recycler_transaction_bank">
+
+                <TextView
+                    android:id="@+id/textView_home_transaction_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Shopping"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_home_transaction_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="170dp"
+                    android:scrollHorizontally="false"
+                    android:text="Details about transaction" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_recycler_view_item_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_recycler_transaction_bank"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="@+id/imageView_recycler_transaction_bank">
+
+                <TextView
+                    android:id="@+id/textView_home_transaction_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="-25.50$"
+                    android:textSize="@dimen/heading_h5"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/text_view_recycler_view_item_transaction_currency"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_view_recycler_view_item_transaction_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" RON"
+                    android:textSize="@dimen/heading_h5"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_home_transaction_sum"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_home_transaction_sum" />
+
+                <TextView
+                    android:id="@+id/textView_home_transaction_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Jun 20"
+                    app:layout_constraintEnd_toEndOf="@+id/text_view_recycler_view_item_transaction_currency"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_home_transaction_sum" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

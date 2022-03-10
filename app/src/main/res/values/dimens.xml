@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--  Margin -->
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+    <dimen name="margin_big">48dp</dimen>
+    <dimen name="margin_extra_big">64dp</dimen>
+
+    <!-- Fonts -->
+    <dimen name="heading_h1">48sp</dimen>
+    <dimen name="heading_h2">40sp</dimen>
+    <dimen name="heading_h3">32sp</dimen>
+    <dimen name="heading_h4">24sp</dimen>
+    <dimen name="heading_h5">20sp</dimen>
+    <dimen name="heading_h6">18sp</dimen>
+
+    <dimen name="font_small_text">12sp</dimen>
+    <dimen name="font_basic_text">16sp</dimen>
+
+    <dimen name="font_medium_text">24sp</dimen>
+    <dimen name="font_card_view_text">24sp</dimen>
+
+    <!-- Fab -->
+    <dimen name="fab_width">48dp</dimen>
+    <dimen name="fab_height">48dp</dimen>
+    <dimen name="fab_margin_end">8dp</dimen>
+    <dimen name="fab_elevation">8dp</dimen>
+    <dimen name="fab_border_width">1dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_extra_large">16dp</dimen>
+    <dimen name="padding_big">24dp</dimen>
+    <dimen name="padding_extra_big">32dp</dimen>
+
+    <!-- Home Arrows -->
+    <dimen name="height_arrow_home">65dp</dimen>
+    <dimen name="width_arrow_home">35dp</dimen>
+
+    <!-- Statistics Category calendar icon dimensions -->
+    <dimen name="statistics_calendar_icon_width">96dp</dimen>
+    <dimen name="statistics_calendar_icon_height">96dp</dimen>
+
+    <!-- Logo -->
+    <dimen name="logo_size">240dp</dimen>
+</resources>

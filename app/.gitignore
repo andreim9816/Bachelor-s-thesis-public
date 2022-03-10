@@ -1,0 +1,5 @@
+/build
+/server/node_modules
+/server/certs/*.key
+/server/stuff
+/server/generated_certs

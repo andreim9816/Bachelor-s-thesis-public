@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.transactions.newTransaction.NewTransactionConfirmFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_new_transaction_confirm_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_extra_large"
+        app:contentPadding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_new_transaction_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/card_view_rounded_medium_size_4_sides">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_read_transaction_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="190"
+                android:textSize="@dimen/heading_h3"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                app:layout_constraintEnd_toEndOf="@+id/text_view_read_transaction_amount"
+                app:layout_constraintStart_toStartOf="@+id/text_view_read_transaction_amount"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_read_transaction_amount" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="RON"
+                app:layout_constraintStart_toEndOf="@+id/text_view_read_transaction_amount"
+                app:layout_constraintTop_toTopOf="@+id/text_view_read_transaction_amount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_new_transaction_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/card_view_rounded_big_size_4_sides">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_transaction_information_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Transaction Information"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_receiving_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_receiver_iban_text"
+                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My iban"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_new_transaction_confirm_my_iban" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Details"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_receiving_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_success_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Gift for George. Don't mention it"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_new_transaction_confirm_details_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_new_transaction_confirm_details_text"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_my_iban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="RO98TESTTESTTEST"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_success_details" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_receiving_iban_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Iban"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_to_text" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_receiver_iban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RO98TESTTESTTEST"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_new_transaction_receiving_iban_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_new_transaction_receiving_iban_text" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="To:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_new_transaction_transaction_information_text" />
+
+            <TextView
+                android:id="@+id/text_view_new_transaction_confirm_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_new_transaction_to_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_new_transaction_to_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_new_transaction_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_extra_big"
+                android:text="Next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
